@@ -149,7 +149,7 @@
 		margin-top: -41px
 		cursor: pointer
 		+s(arr_prev)
-		&:active
+		&:hover
 			+s(arr_prev-h)
 	.cycle__next
 		position: absolute
@@ -158,8 +158,29 @@
 		margin-top: -41px
 		cursor: pointer
 		+s(arr_next)
-		&:active
+		&:hover
 			+s(arr_next-h)
+	.cycle__pager
+		position: absolute
+		left: 50%
+		bottom: 22px
+		margin-left: -200px
+		z-index: 100
+		span
+			display: inline-block
+			width: 15px
+			height: 15px
+			margin-right: 10px
+			text-indent: -1000px
+			background-color: #c9c7cb
+			cursor: pointer
+			+border-radius(8px)
+			+box-shadow(0 1px 0 #fff, inset 0 1px 0 rgba(0,0,0,.48))
+		.cycle-pager-active
+			background-color: #0967b1
+			vertical-align: 1px
+			+box-shadow(0 1px 0 rgba(72,72,72,.53), inset 0 1px 0 #fff)
+			+background-image(linear-gradient(bottom, rgba(0,0,0,.27) 0%, rgba(255,255,255,.27) 100%))
 
 //catalog
 .catalog__wrapper
