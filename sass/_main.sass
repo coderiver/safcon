@@ -1,216 +1,443 @@
 // Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.header
+	height: 100px
+	border-bottom: 1px solid #DEDEDE
+
+.header__in
+	@extend %in
+	height: 96px
+	+clr
+	.logo
+		display: block
+		float: left
+		padding: 13px 0 0 30px
+		a
+			display: block
+	.phone
+		float: left
+		padding: 35px 0 0 167px
+		line-height: 1.1
+		+clr
+		.phone__in
+			float: left
+			padding-right: 27px
+			&:last-child
+				padding-right: 0
+		.phone__num
+			color: #212125
+			+fs(17)
+			+rl
+			i
+				padding-right: 15px
+				color: #808087
+				+fs(18)
+		.phone__desc
+			color: #808087
+			text-align: right
+			letter-spacing: -0.25px
+			+fs(13)
+			+rr
+	.search
+		float: left
+		padding: 37px 0 0 37px
+		i
+			padding-right: 12px
+			color: #818187
+			+fs(18)
+		.search__input
+			width: 177px
+			height: 30px
+			padding: 0 10px
+			color: #8b8b91
+			background-color: #fff
+			border: 1px solid #cdcdcd
+			+fs(13)
+			+rr
+			+box
+			+border-radius(3px)
+	.sign
+		float: left
+		padding: 42px 0 0 35px
+		.sign__desc
+			color: #212125
+			text-decoration: none
+			+fs(13)
+			+rr
+			&:hover
+				text-decoration: underline
+		i
+			padding-right: 12px
+			color: #818187
+			+fs(18)
+
+.nav
+	width: 100%
+	background: url(../img/icons/shadow.png) center 63px no-repeat
+
+.nav__inner
+	@extend %in
+	height: 65px
+	padding: 0 30px
+	+box
+	+clr
+	.nav__li
+		float: left
+		&.last
+			.nav__a
+				padding-right: 0
+	.nav__a
+		text-decoration: none
+		color: #212125
+		line-height: 60px
+		padding-right: 33.6px
+		+fs(16)
+		+rc
+		&:hover
+			text-decoration: underline
+
+//cycle
+.slider__wrapper
+	height: 455px
+	background: url(../img/icons/bg2.png) repeat
+
+.slider
+	position: relative
+	width: 1140px
+	min-height: 455px
+	margin: 0 auto
+	.cycle__inner
+		width: 100%
+		height: 455px
+		overflow: hidden
+		+clr
+	.cycle__img
+		float: left
+		.video
+			margin: 40px 0 0 20px
+	.cycle__txt
+		float: right
+		max-width: 420px
+		padding: 50px 45px 0 0
+		text-align: right
+		.sub
+			display: inline-block
+			margin: 40px 0 10px 0
+			width: 70%
+			color: #212125
+			+fs(21)
+			+rc
+		.cycle__desc
+			margin-bottom: 20px
+			+fs(13)
+			+rr
+		.cycle__but
+			width: 125px
+			height: 42px
+			color: #FFF
+			background: url(../img/icons/but_light.png) top center no-repeat
+			background-color: #0765b1
+			+box-shadow(0 1px 2px rgba(0,0,0,.64), inset 0 1px 0 rgba(255,255,255,.8))
+			+fs(16)
+			+rcb
+			&:active
+				top: 1px
+				position: relative
+	.cycle__prev
+		position: absolute
+		top: 50%
+		left: -25px
+		margin-top: -41px
+		cursor: pointer
+		+s(arr_prev)
+		&:active
+			+s(arr_prev-h)
+	.cycle__next
+		position: absolute
+		top: 50%
+		right: -25px
+		margin-top: -41px
+		cursor: pointer
+		+s(arr_next)
+		&:active
+			+s(arr_next-h)
+
+//catalog
+.catalog__wrapper
+	background: url(../img/icons/shadow.png) center top no-repeat
+	padding: 20px 0 28px 0
+
+.catalog
+	@extend %in
+	.catalog__row
+		padding-bottom: 20px
+		+clr
+		&.last
+			padding-bottom: 0
+	.catalog__item
+		float: left
+		width: 224px
+		height: 245px
+		margin-right: 20px
+		text-align: center
+		+box-shadow(0 0 7px rgba(0,0,0,.16))
+		+box
+		&.last
+			margin-right: 0
+	.catalog__link
+		display: block
+		height: inherit
+		text-decoration: none
+	.catalog__img
+		height: 180px
+		display: inline-block
+		vertical-align: middle
+		+vertical
+		img, p
+			display: inline-block
+			vertical-align: middle
+		.sale
+			color: #5f5f61
+			+fs(90)
+			+rbt
+	.catalog__txt
+		color: #0966b1
+		+fs(18)
+		+rcb
+
+//solutions
+.solutions__wrapper
+	background: url(../img/icons/bg.png) repeat
+
+.solutions
+	background: url(../img/icons/shadow.png) center top no-repeat
+
+.solutions__inner
+	@extend %in
+	min-height: 360px
+	border-bottom: 1px dashed #878787
+	+clr
+	&.last
+		min-height: 350px
+		border: 0
+	.solutions__block
+		float: left
+		&.analog
+			padding: 77px 0 0 104px
+		&.digital
+			padding: 59px 0 0 20px
+	.solutions__analog
+		+s(solution1)
+	.solutions__digital
+		+s(solution2)
+	.solutions__decide
+		padding: 52px 0 0 65px
+		+box
+		&.another
+			padding: 27px 0 0 50px
+	.solutions__table
+		margin: 53px 0 0 5px
+	.solutions__td
+		width: 260px
+		padding-bottom: 20px
+		color: #212125
+		+fs(18)
+		+rl
+	.solutions__num
+		display: inline-block
+		width: 48px
+		height: 48px
+		margin-right: 10px
+		text-align: center
+		vertical-align: middle
+		background-color: #212125
+		color: #fff
+		+rb
+		+fs(30)
+		+border-radius(24px)
+		+box
+		&.blue
+			background-color: #0967b1
+	.solutions__b
+		+rcb
+
+//purpose block
+.purpose__wrapper
+	background: url(../img/icons/shadow.png) center top no-repeat
+	padding: 15px 0
+
+.purpose
+	@extend %in
+	.purpose__row
+		padding-bottom: 20px
+		+clr
+		&.last
+			padding-bottom: 0
+	.purpose__item
+		float: left
+		margin-right: 20px
+		text-align: center
+		+box
+		&.home, &.garden
+			+s(purpose1)
+		&.flat, &.school
+			+s(purpose2)
+		&.parking, &.apartment
+			+s(purpose3)
+		&.office, &.gas
+			+s(purpose4)
+		&.cash, &.build
+			+s(purpose5)
+		&.box, &.complex
+			+s(purpose6)
+		&.last
+			margin-right: 0
+	.purpose__link
+		display: block
+		height: inherit
+		text-decoration: none
+	.purpose__img
+		height: 107px
+		display: inline-block
+		vertical-align: middle
+		+vertical
+		img, p
+			display: inline-block
+			vertical-align: middle
+		.home
+			margin-top: 15px
+		.flat
+			margin: 15px 0 0 20px
+		.parking
+			margin: 20px 28px 0 0
+		.office
+			margin: 23px 10px 0 0
+		.cash
+			margin-top: 15px
+		.box
+			margin-top: 20px
+		.garden, .school, .apartment
+			margin-top: 20px
+		.gas
+			margin: 25px 0 0 10px
+		.build
+			margin: 5px 0 0 10px
+		.complex
+			margin-top: 5px
+	.purpose__txt
+		color: #fff
+		line-height: 1.2
+		+fs(18)
+		+rcb
+		&.line
+			padding-top: 10px
+
+//safcon block
+.safcon__wrapper
+	background: url(../img/icons/bg.png) repeat
+	min-height: 470px
+
+.safcon
+	background: url(../img/icons/shadow.png) center top no-repeat
+
+.safcon__inner
+	@extend %in
+	padding: 60px 0 0 55px
+	+clr
+	.safcon__block
+		float: left
+		&.withtxt
+			width: 750px
+	h2
+		padding-bottom: 26px
+		+fs(21)
+	img
+		margin: 74px 0 0 38px
+	.safcon__txt
+		margin-bottom: 15px
+		color: #2c2c2c
+		+fs(13)
+		+rr
+
+//footer
+.footer
+	background: url(../img/icons/bg3.png) repeat
+	height: 112px
+	&.another
+		height: 82px
+		background: #1a1a1a
+	.footer__inner
+		@extend %in
+		+clr
+	.footer__block
+		float: left
+		&.right
+			float: right
+	.footer__download
+		display: block
+		padding: 33px 0 0 40px
+		color: #d9d9d9
+		text-decoration: none
+		+fs(36)
+		+rbt
+		i
+			margin-right: 25px
+	.footer__menu
+		padding-top: 37px
+		+clr
+	.menu__item
+		float: left
+		&:first-child
+			a
+				padding: 0 58px 0 73px
+		&.last
+			a
+				padding: 0 47px 0 73px
+				border: 0
+		a
+			display: block
+			padding: 0 90px 0 54px
+			color: #d9d9d9
+			text-decoration: none
+			line-height: 47px
+			border-right: 1px solid #4f4f4f
+			+fs(18)
+			+rcb
+			&:hover
+				text-decoration: underline
+	.phone
+		float: left
+		padding: 30px 0 0 45px
+		line-height: 1.1
+		+clr
+		.phone__in
+			float: left
+			padding-right: 27px
+			&:last-child
+				padding-right: 0
+		.phone__num
+			color: #d9d9d9
+			+fs(17)
+			+rl
+			i
+				padding-right: 15px
+				color: #d9d9d9
+				+fs(18)
+		.phone__desc
+			color: #d9d9d9
+			text-align: right
+			letter-spacing: -0.25px
+			+fs(13)
+			+rr
+	.copyright
+		float: right
+		padding: 30px 35px 0 0
+		.copyright__txt
+			text-align: right
+			color: #d9d9d9
+			+fs(13)
+			+rr
+			a
+				color: #0866B1
+				text-decoration: none
+				&:hover
+					text-decoration: underline

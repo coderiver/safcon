@@ -34,133 +34,59 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book", Arial, sans-serif 
-// insert pics into css
-// div
-// 	+pic("blabla.png")
-// span
-// 	+png(blabla)
-// p
-// 	+jpg(bla)
+// 	font-family: "book",arial,sans-serif
 
+html, body
+	font-size: 62.5%
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	font-family: Arial,sans-serif
+	font-weight: normal
 	line-height: 1.4
-
-
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	background: #FFF
+
+// fonts
++font(FontAwesome, fontawesome-webfont)
++font(roboto-regular, roboto-regular)
++font(roboto-light, roboto-light)
++font(roboto-condensed, roboto-condensed)
++font(roboto-condensed-bold, roboto-condensed-bold)
++font(roboto-thin, roboto-thin)
++font(roboto-bold, roboto-bold)
+
+
+=fa
+	font-family: "FontAwesome", Arial, sans-serif
+=rr
+	font-family: "roboto-regular", Arial, sans-serif
+=rl
+	font-family: "roboto-light", Arial, sans-serif
+=rc
+	font-family: "roboto-condensed", Arial, sans-serif
+=rcb
+	font-family: "roboto-condensed-bold", Arial, sans-serif
+=rbt
+	font-family: "roboto-thin", Arial, sans-serif
+=rb
+	font-family: "roboto-bold", Arial, sans-serif
+
+
+h1, .ttl
+	color: #0765b1
+	line-height: 1.2
+	+fs(36)
+	+rc
+
+h2, .subttl
+	color: #414141
+	line-height: 1.2
+	+fs(36)
+	+rbt
+
+%in
+	width: 1200px
+	margin: 0 auto
