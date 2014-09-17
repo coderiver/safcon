@@ -117,8 +117,6 @@
 		+clr
 	.cycle__img
 		float: left
-		.video
-			margin: 40px 0 0 20px
 	.cycle__txt
 		float: right
 		max-width: 420px
@@ -189,8 +187,15 @@
 
 //catalog
 .catalog__wrapper
-	background: url(../img/icons/shadow.png) center top no-repeat
+	position: relative
 	padding: 20px 0 28px 0
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -661.5px
+		+s(shadow)
 
 .catalog
 	@extend %in
@@ -265,6 +270,9 @@
 	.solutions__td
 		width: 260px
 		padding-bottom: 20px
+	.solutions__a
+		display: inherit
+		text-decoration: none
 		color: #212125
 		+fs(18)
 		+rl
@@ -288,8 +296,15 @@
 
 //purpose block
 .purpose__wrapper
-	background: url(../img/icons/shadow.png) center top no-repeat
+	position: relative
 	padding: 15px 0
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -661.5px
+		+s(shadow)
 
 .purpose
 	@extend %in
@@ -363,7 +378,15 @@
 	min-height: 470px
 
 .safcon
-	background: url(../img/icons/shadow.png) center top no-repeat
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -661.5px
+		+s(shadow)
+
 
 .safcon__inner
 	@extend %in
@@ -376,6 +399,8 @@
 	h2
 		padding-bottom: 26px
 		+fs(21)
+	h6
+		padding-bottom: 20px
 	img
 		margin: 74px 0 0 38px
 	.safcon__txt
@@ -383,6 +408,8 @@
 		color: #2c2c2c
 		+fs(13)
 		+rr
+	ul
+		margin: 0 0 13px 12px
 
 //footer
 .footer
@@ -406,6 +433,7 @@
 		+fs(36)
 		+rbt
 		i
+			color: #FFF
 			margin-right: 25px
 	.footer__menu
 		padding-top: 37px

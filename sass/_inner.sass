@@ -48,14 +48,25 @@
 			background-color: #0765b1
 			color: #FFF
 
+//typography
 .content
 	float: left
 	width: 950px
+	&.shop
+		h1
+			color: #212125
+			line-height: 1.3
+		.breadcrumbs
+			border: 0
+			margin-bottom: 0
+			padding-bottom: 0
 	.breadcrumbs
 		margin-bottom: 15px
 		padding-bottom: 25px
 		border-bottom: 1px dotted #c4c4c4
 		+clr
+		ul
+			margin-top: 0
 		li
 			float: left
 			&:first-child
@@ -63,6 +74,7 @@
 					color: #0866b1
 					&:before
 						content: ""
+						padding: 1px
 		a
 			padding-right: 5px
 			text-decoration: none
@@ -72,6 +84,8 @@
 			&:before
 				content: "/"
 				padding-right: 5px
+			&.is-active
+				color: #0866b1
 	section
 		border-top: 1px dotted #c4c4c4
 		padding-top: 34px
@@ -85,18 +99,8 @@
 				margin-left: 50px
 				&:first-child
 					margin-left: 0
-					li
-						&:before
-							content: ""
-							position: absolute
-							top: 50%
-							margin-top: -3.5px
-							width: 7px
-							height: 7px
-							background-color: #0765b1
-						span
-							padding-left: 17px
-							color: #2c2c2c
+			h6
+				margin-bottom: 20px
 	blockquote
 		padding: 30px
 		margin-bottom: 70px
@@ -145,6 +149,119 @@
 		img
 			float: right
 			margin-right: 15px
+
+//shop
+.shop__block
+	display: inline-block
+	vertical-align: middle
+
+.show
+	margin-left: 190px
+	color: #818187
+	line-height: 1.3
+	.show__p
+		+fs(18)
+		+rcb
+	.show__num
+		padding: 0 5px
+		color: #0765b1
+		text-decoration: none
+		+rl
+		&.is-active
+			color: #818187
+	&.pages
+		margin-left: 70px
+
+.pagination
+	margin: 10px 0 40px 0
+	text-align: right
+	.pages
+		margin-right: 30px
+
+.shop__inner
+	text-align: justify
+	margin-top: 25px
+	&:after
+		content: ""
+		width: 100%
+		display: inline-block
+	.shop__item
+		display: inline-block
+		width: 217px
+		height: 490px
+		margin-bottom: 20px
+		overflow: hidden
+		vertical-align: top
+		+box-shadow(0 0 7px rgba(0,0,0,.16))
+	.shop__img
+		display: inline-block
+		width: 100%
+		height: 215px
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+		.shop1
+			margin-left: 5px
+	.shop__desc
+		padding: 0 5px
+	.shop__ttl
+		text-align: center
+		color: #0965b1
+		margin-bottom: 15px
+		+fs(18)
+		+rcb
+	.shop__buy
+		width: 95%
+		margin: 0 auto
+		padding-bottom: 10px
+		text-align: center
+		border-bottom: 1px dotted #c4c4c4
+	.shop__price
+		color: #212125
+		vertical-align: middle
+		+fs(18)
+		+rbt
+	.shop__blue
+		text-decoration: none
+		color: #0866b1
+		&:hover
+			text-decoration: underline
+	.btn__buy
+		display: inline-block
+		width: 80px
+		height: 30px
+		margin-left: 10px
+		padding-bottom: 2px
+		background: #0765b1
+		color: #FFF
+		vertical-align: middle
+		+fs(18)
+		+rcb
+		+clr
+		&:active
+			position: relative
+			top: 1px
+	.shop__or
+		margin-top: 10px
+		text-align: center
+		color: #2c2c2c
+		+fs(13)
+		+rr
+	.shop__txt
+		margin: 10px 0 0 6px
+		text-align: left
+		color: #2c2c2c
+		line-height: 1.2
+		+fs(13)
+		+rr
+
+
+
+
+
+
+
 
 
 
