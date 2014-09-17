@@ -18,6 +18,8 @@
 		padding: 35px 0 0 167px
 		line-height: 1.1
 		+clr
+		&.another
+			padding: 35px 0 0 70px
 		.phone__in
 			float: left
 			padding-right: 27px
@@ -66,34 +68,37 @@
 			&:hover
 				text-decoration: underline
 		i
-			padding-right: 12px
+			padding-right: 10px
 			color: #818187
 			+fs(18)
 
 .nav
 	width: 100%
-	background: url(../img/icons/shadow.png) center 63px no-repeat
+	&:after
+		content: ""
+		position: absolute
+		left: 50%
+		margin-left: -661.5px
+		+s(shadow)
 
 .nav__inner
 	@extend %in
-	height: 65px
-	padding: 0 30px
+	padding: 0 15px
 	+box
 	+clr
 	.nav__li
 		float: left
-		&.last
-			.nav__a
-				padding-right: 0
 	.nav__a
+		display: block
 		text-decoration: none
 		color: #212125
-		line-height: 60px
-		padding-right: 33.6px
+		line-height: 63px
+		padding: 0 15px 0 18px
 		+fs(16)
 		+rc
 		&:hover
-			text-decoration: underline
+			background-color: #0765b1
+			color: #fff
 
 //cycle
 .slider__wrapper

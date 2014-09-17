@@ -63,6 +63,7 @@ body
 	font-family: "FontAwesome", Arial, sans-serif
 =rr
 	font-family: "roboto-regular", Arial, sans-serif
+	font-weight: normal
 =rl
 	font-family: "roboto-light", Arial, sans-serif
 =rc
@@ -71,9 +72,14 @@ body
 	font-family: "roboto-condensed-bold", Arial, sans-serif
 =rbt
 	font-family: "roboto-thin", Arial, sans-serif
+	font-weight: normal
 =rb
 	font-family: "roboto-bold", Arial, sans-serif
 
+
+%in
+	width: 1200px
+	margin: 0 auto
 
 h1, .ttl
 	color: #0765b1
@@ -87,6 +93,71 @@ h2, .subttl
 	+fs(36)
 	+rbt
 
-%in
-	width: 1200px
-	margin: 0 auto
+h3
+	color: #212125
+	+fs(20)
+	+rcb
+
+h4
+	color: #2c2c2c
+	+fs(15)
+	+rr
+
+h5
+	color: #0967b1
+	@extend h1
+
+h6
+	color: #3f3f3f
+	+fs(21)
+	@extend h2
+
+ol
+	width: 200px
+	padding-left: 20px
+	counter-reset: item
+	li
+		position: relative
+		margin-bottom: 10px
+		color: #FFF
+		+fs(14)
+		+rcb
+		&:before
+			content: counter(item) ''
+			counter-increment: item
+			position: absolute
+			top: 50%
+			left: -25px
+			margin-top: -10px
+			width: 20px
+			height: 20px
+			background-color: #0866b1
+			text-align: center
+		span
+			padding-left: 10px
+			display: inline-block
+			vertical-align: middle
+			line-height: 1
+			color: #2c2c2c
+			+rr
+
+ul
+	margin-top: 20px
+	+fs(13)
+	li
+		position: relative
+		margin-bottom: 10px
+		+fs(13)
+		+rr
+		span
+			padding-left: 10px
+		i
+			display: inline-block
+			font-family: FontAwesome
+			font-style: normal
+			font-weight: normal
+			line-height: 1
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			&:before
+				content: "\f14a"

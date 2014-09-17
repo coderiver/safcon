@@ -1,0 +1,153 @@
+//inner pages
+.cart
+	position: relative
+	display: block
+	float: right
+	width: 125px
+	height: 100px
+	background-color: #0765b1
+	color: #fff
+	text-align: center
+	+vertical
+	.cart__center, .cart__in
+		display: inline-block
+		vertical-align: middle
+	.cart__ttl
+		+fs(17)
+		+rl
+	.cart__txt
+		+fs(13)
+		+rr
+	i
+		padding-right: 10px
+		vertical-align: middle
+		+fs(18)
+
+.inside__wrapper
+	margin-top: 30px
+	padding-left: 15px
+	@extend %in
+	+clr
+	+box
+
+.sidenav
+	float: left
+	width: 200px
+	margin-right: 35px
+	.sidenav__a
+		display: block
+		padding: 5px 0 5px 15px
+		text-decoration: none
+		color: #0965b1
+		border-bottom: 1px dotted #c4c4c4
+		+fs(13)
+		+rr
+		&.last
+			border: 0
+		&:hover
+			background-color: #0765b1
+			color: #FFF
+
+.content
+	float: left
+	width: 950px
+	.breadcrumbs
+		margin-bottom: 15px
+		padding-bottom: 25px
+		border-bottom: 1px dotted #c4c4c4
+		+clr
+		li
+			float: left
+			&:first-child
+				a
+					color: #0866b1
+					&:before
+						content: ""
+		a
+			padding-right: 5px
+			text-decoration: none
+			color: #212125
+			+fs(13)
+			+rr
+			&:before
+				content: "/"
+				padding-right: 5px
+	section
+		border-top: 1px dotted #c4c4c4
+		padding-top: 34px
+		margin-bottom: 40px
+		+clr
+		.content__inside
+			padding: 0 30px
+			+box
+			div
+				float: left
+				margin-left: 50px
+				&:first-child
+					margin-left: 0
+					li
+						&:before
+							content: ""
+							position: absolute
+							top: 50%
+							margin-top: -3.5px
+							width: 7px
+							height: 7px
+							background-color: #0765b1
+						span
+							padding-left: 17px
+							color: #2c2c2c
+	blockquote
+		padding: 30px
+		margin-bottom: 70px
+		background: url(../img/icons/bg.png) repeat
+		border-top: 1px dotted #c4c4c4
+		border-bottom: 1px dotted #c4c4c4
+		p
+			margin-bottom: 13px
+			color: #2c2c2c
+			+fs(13)
+			+rr
+
+.content__inside
+	h2
+		margin-bottom: 32px
+	p
+		margin-bottom: 13px
+		color: #2C2C2C
+		+fs(13)
+		+rr
+		span
+			color: #0765b1
+	h3
+		margin: 27px 0 20px 0
+	table
+		margin-bottom: 65px
+		border-collapse: collapse
+		tr
+			&:nth-child(odd)
+				background: #FFF
+			&:nth-child(even)
+				background-color: #f5f5f5
+		td
+			padding: 15px 0 15px 25px
+			border: 1px solid #dddddd
+			color: #2c2c2c
+			+fs(13)
+			+rr
+			&:first-child
+				width: 464px
+	article
+		padding-bottom: 45px
+		+clr
+		p
+			width: 530px
+		img
+			float: right
+			margin-right: 15px
+
+
+
+
+
+
