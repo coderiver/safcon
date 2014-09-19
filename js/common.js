@@ -11,4 +11,14 @@ head.ready(function() {
 	  slideshows.cycle('goto', index);
 	});
 
+	//input value remove
+	var Input = $('input');
+	var defaultValue = $('input').val();
+
+	Input.focus(function() {
+		if(Input.val() == defaultValue) Input.val("");
+		}).blur(function(){
+		if(Input.val().length == 0) Input.val(defaultValue);
+		});
+
 });
