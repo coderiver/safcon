@@ -324,7 +324,7 @@ ol li span { padding-left: 10px; display: inline-block; vertical-align: middle; 
 .item__wrap .item__specs { float: right; width: 445px; }
 .item__wrap .item__specs h3 { margin: 0; padding-left: 15px; }
 .item__wrap .item__table { margin-top: 15px; }
-.item__wrap .item__table td { border: 0; padding: 3px 0 5px 15px; }
+.item__wrap .item__table td { border: 0; padding: 4px 0 5px 15px; }
 .item__wrap .item__table td:first-child { width: 63%; }
 .item__wrap .item__table .onright { text-align: right; padding-right: 15px; }
 .item__wrap .item__buy { *zoom: 1; }
