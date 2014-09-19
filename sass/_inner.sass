@@ -62,6 +62,9 @@
 			padding-bottom: 0
 		.content__inside
 			padding-right: 30px
+	&.contact
+		.breadcrumbs
+			margin-bottom: 0
 	.breadcrumbs
 		margin-bottom: 15px
 		padding-bottom: 25px
@@ -333,7 +336,7 @@
 	margin-bottom: 75px
 	border-top: 1px dotted #c4c4c4
 
-//slider
+//item__slider
 .item__slider
 	margin-top: 60px
 	.slider
@@ -373,6 +376,134 @@
 				height: 68px
 				margin: 0 auto
 				cursor: pointer
+
+//contacts
+.contacts__wrap
+	height: 100%
+	display: table
+
+.contacts__left
+	display: table-cell
+	width: 520px
+	padding-top: 15px
+	.contacts__map
+		margin-top: 30px
+		border-bottom: 1px dotted #c4c4c4
+		&:first-child
+			margin-top: 50px
+		&.last
+			border: 0
+			margin-bottom: 25px
+	.address
+		color: #212125
+		+fs(20)
+		+rcb
+	.yandex__map
+		margin-top: 25px
+	.hall
+		margin: 30px 0
+		&.another
+			margin: 30px 0 40px 0
+			.hall__list
+				margin-left: 55px
+	.hall__list, .hall__txt
+		display: inline-block
+		vertical-align: top
+	.hall__list
+		width: auto
+		min-width: 50%
+		margin-left: 85px
+	.hall__txt
+		display: inline-block
+		vertical-align: top
+		color: #212125
+		+fs(18)
+		+rcb
+	.hall__num
+		color: #212125
+		+fs(18)
+		+rl
+	.tel
+		padding-left: 30px
+		+fs(13)
+		+rr
+	.tel__num
+		+fs(13)
+		+rb
+
+.contacts__right
+	display: table-cell
+	width: 430px
+	vertical-align: top
+	background-color: #f9f9f9
+	.call__block
+		border-bottom: 1px dotted #c4c4c4
+		&.last
+			border: 0
+	.callto
+		margin: 30px 0 30px 30px
+		&.another
+			margin: 30px 0 30px 30px
+			.callto__list
+				margin-left: 30px
+	.callto__list, .callto__txt
+		display: inline-block
+		vertical-align: top
+	.callto__list
+		width: auto
+		min-width: 50%
+		margin-left: 95px
+	.callto__txt
+		display: inline-block
+		vertical-align: top
+		color: #212125
+		+fs(18)
+		+rcb
+	.callto__num
+		color: #212125
+		+fs(18)
+		+rl
+		&.withpad
+			padding-bottom: 20px
+		.callto__link
+			color: #0765b1
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.callto__p
+		color: #808087
+		+fs(13)
+		+rr
+	.people
+		width: 275px
+		margin: 25px 0
+		color: #212125
+		text-align: right
+		+fs(15)
+		+rm
+		td
+			&:first-child
+				text-align: left
+	.worktime
+		padding-bottom: 16px
+		+fs(13)
+		+rr
+	.people__mail
+		color: #0765b1
+		text-decoration: none
+		+fs(15)
+		+rr
+		&:hover
+			text-decoration: underline
+	.people__call
+		display: inline-block
+		padding-left: 65px
+		&.another
+			padding-left: 52px
+		&.more
+			padding-left: 62px
+
+
 
 
 
