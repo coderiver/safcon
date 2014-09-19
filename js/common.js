@@ -1,8 +1,14 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	//galleries synchronize
+	var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+	  slideshows.not(this).cycle('goto', opts.currSlide);
+	});
 
-	console.log($('body').html());
+	$('.gallery__pager .slide').click(function() {
+	  var index = $('.gallery__pager').data('cycle.API').getSlideIndex(this);
+	  console.log(index);
+	  slideshows.cycle('goto', index);
+	});
+
 });

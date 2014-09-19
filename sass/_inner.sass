@@ -33,7 +33,7 @@
 .sidenav
 	float: left
 	width: 200px
-	margin-right: 35px
+	margin: 0 35px 50px 0
 	.sidenav__a
 		display: block
 		padding: 5px 0 5px 15px
@@ -60,6 +60,8 @@
 			border: 0
 			margin-bottom: 0
 			padding-bottom: 0
+		.content__inside
+			padding-right: 30px
 	.breadcrumbs
 		margin-bottom: 15px
 		padding-bottom: 25px
@@ -229,19 +231,9 @@
 			text-decoration: underline
 	.btn__buy
 		display: inline-block
-		width: 80px
-		height: 30px
 		margin-left: 10px
-		padding-bottom: 2px
-		background: #0765b1
-		color: #FFF
 		vertical-align: middle
-		+fs(18)
-		+rcb
 		+clr
-		&:active
-			position: relative
-			top: 1px
 	.shop__or
 		margin-top: 10px
 		text-align: center
@@ -256,11 +248,131 @@
 		+fs(13)
 		+rr
 
+//item
+.float__parent
+	+clr
+	.breadcrumbs
+		float: left
+	.backto
+		float: right
+		a
+			text-decoration: none
+			color: #0765b1
+			+fs(13)
+			+rr
+			&:hover
+				text-decoration: underline
+			i
+				padding-right: 3px
 
+.item__wrap
+	margin-top: 25px
+	padding-top: 15px
+	border-top: 1px dotted #c4c4c4
+	+clr
+	.item
+		float: left
+		width: 440px
+		margin-right: 35px
+		h1
+			color: #0765b1
+			line-height: 1.2
+		h2
+			margin-bottom: 18px
+	.item__specs
+		float: right
+		width: 445px
+		h3
+			margin: 0
+			padding-left: 15px
+	.item__table
+		margin-top: 15px
+		td
+			border: 0
+			padding: 3px 0 5px 15px
+			&:first-child
+				width: 63%
+		.onright
+			text-align: right
+			padding-right: 15px
+	.item__buy
+		+clr
+	.item__left
+		float: left
+		p
+			margin-bottom: 0
+		.item__price
+			color: #212125
+			line-height: 1
+			margin-bottom: 3px
+			+fs(28)
+			+rcb
+		.item__tax
+			color: #818187
+			+fs(13)
+			+rr
+	.item__right
+		float: right
+		width: 265px
+		padding-top: 10px
+		.btn__buy
+			display: inline-block
+			margin-right: 10px
+		.shop__or
+			display: inline-block
+			width: 110px
+			vertical-align: middle
+			line-height: 1
+		.shop__blue
+			text-decoration: none
+			color: #0866b1
+			&:hover
+				text-decoration: underline
 
+.item__desc
+	margin-bottom: 75px
+	border-top: 1px dotted #c4c4c4
 
-
-
+//slider
+.item__slider
+	margin-top: 60px
+	.slider
+		width: 400px
+	.gallery__top
+		position: relative
+		.slide
+			width: 100%
+			img
+				width: 90%
+				margin: 0 auto
+				max-width: 325px
+				display: block
+		.item__prev
+			position: absolute
+			top: 50%
+			left: -10px
+			margin-top: -30.5px
+			z-index: 1000
+			+s(item_prev)
+		.item__next
+			position: absolute
+			top: 50%
+			right: -10px
+			margin-top: -30.5px
+			z-index: 1000
+			+s(item_next)
+	.gallery__bottom
+		margin-top: 80px
+		.gallery__pager
+			width: 360px
+			margin: 0 auto
+		.slide
+			img
+				display: block
+				width: 100px
+				height: 68px
+				margin: 0 auto
+				cursor: pointer
 
 
 
