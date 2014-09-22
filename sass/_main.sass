@@ -74,12 +74,10 @@
 
 .nav
 	width: 100%
-	&:after
-		content: ""
-		position: absolute
-		left: 50%
-		margin-left: -661.5px
-		+s(shadow)
+	max-width: 1323px
+	margin: 0 auto
+	position: relative
+	+box-shadow(0 10px 7px -10px rgba(0,0,0,.16))
 
 .nav__inner
 	@extend %in
@@ -103,6 +101,7 @@
 //cycle
 .slider__wrapper
 	height: 455px
+	margin-top: 1px
 	background: url(../img/icons/bg2.png) repeat
 
 .slider
@@ -145,6 +144,8 @@
 			&:active
 				top: 1px
 				position: relative
+			&:hover
+				background-color: lighten(#0765b1, 5%)
 	.cycle__prev
 		position: absolute
 		top: 50%
@@ -188,15 +189,12 @@
 
 //catalog
 .catalog__wrapper
+	width: 100%
+	max-width: 1323px
+	margin: 0 auto
 	position: relative
 	padding: 20px 0 28px 0
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		left: 50%
-		margin-left: -661.5px
-		+s(shadow)
+	+box-shadow(0 -10px 7px -10px rgba(0,0,0,.16))
 
 .catalog
 	@extend %in
@@ -212,9 +210,12 @@
 		margin-right: 20px
 		text-align: center
 		+box-shadow(0 0 7px rgba(0,0,0,.16))
-		+box
 		&.last
 			margin-right: 0
+		&:hover
+			+box-shadow(0 0 5px rgba(0,0,0,.4))
+			.catalog__txt
+				text-decoration: underline
 	.catalog__link
 		display: block
 		height: inherit
@@ -241,7 +242,7 @@
 	background: url(../img/icons/bg.png) repeat
 
 .solutions
-	background: url(../img/icons/shadow.png) center top no-repeat
+	//background: url(../img/icons/shadow.png) center top no-repeat
 
 .solutions__inner
 	@extend %in
@@ -277,6 +278,8 @@
 		color: #212125
 		+fs(18)
 		+rl
+		&:hover
+			text-decoration: underline
 	.solutions__num
 		display: inline-block
 		width: 48px
@@ -299,40 +302,44 @@
 .purpose__wrapper
 	position: relative
 	padding: 15px 0
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		left: 50%
-		margin-left: -661.5px
-		+s(shadow)
+	// &:after
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 50%
+	// 	margin-left: -661.5px
+	// 	+s(shadow)
 
 .purpose
 	@extend %in
-	.purpose__row
-		padding-bottom: 20px
-		+clr
-		&.last
-			padding-bottom: 0
+	+clr
 	.purpose__item
 		float: left
-		margin-right: 20px
+		width: 175px
+		height: 150px
+		margin: 12px
 		text-align: center
-		+box
+		+box-shadow(0 1px 4px rgba(0,0,0,.54), inset 0 1px 0 rgba(255,255,255,.8))
 		&.home, &.garden
-			+s(purpose1)
+			background: url(../img/icons/purpose1.png) top center no-repeat
+			background-color: #0965b1
 		&.flat, &.school
-			+s(purpose2)
+			background: url(../img/icons/purpose2.png) top center no-repeat
+			background-color: #0965b1
 		&.parking, &.apartment
-			+s(purpose3)
+			background: url(../img/icons/purpose3.png) top center no-repeat
+			background-color: #0965b1
 		&.office, &.gas
-			+s(purpose4)
+			background: url(../img/icons/purpose4.png) top center no-repeat
+			background-color: #0965b1
 		&.cash, &.build
-			+s(purpose5)
+			background: url(../img/icons/purpose5.png) top center no-repeat
+			background-color: #0965b1
 		&.box, &.complex
-			+s(purpose6)
-		&.last
-			margin-right: 0
+			background: url(../img/icons/purpose6.png) top center no-repeat
+			background-color: #0965b1
+		&:hover
+			background-color: lighten(#0965b1, 5%)
 	.purpose__link
 		display: block
 		height: inherit
@@ -380,13 +387,13 @@
 
 .safcon
 	position: relative
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		left: 50%
-		margin-left: -661.5px
-		+s(shadow)
+	// &:after
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 50%
+	// 	margin-left: -661.5px
+	// 	+s(shadow)
 
 
 .safcon__inner
@@ -436,6 +443,13 @@
 		i
 			color: #FFF
 			margin-right: 25px
+		&:hover
+			text-decoration: underline
+			i
+				-webkit-animation: move-down 0.5s linear infinite
+				-moz-animation: move-down 0.5s linear infinite
+				-o-animation: move-down 0.5s linear infinite
+				animation: move-down 0.5s linear infinite
 	.footer__menu
 		padding-top: 37px
 		+clr

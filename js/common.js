@@ -1,4 +1,4 @@
-head.ready(function() {
+$(document).ready(function() {
 
 	//galleries synchronize
 	var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {

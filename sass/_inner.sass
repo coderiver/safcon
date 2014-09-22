@@ -9,6 +9,8 @@
 	color: #fff
 	text-align: center
 	+vertical
+	&:hover
+		background-color: lighten(#0765b1, 5%)
 	.cart__center, .cart__in
 		display: inline-block
 		vertical-align: middle
@@ -69,28 +71,31 @@
 		margin-bottom: 15px
 		padding-bottom: 25px
 		border-bottom: 1px dotted #c4c4c4
-		+clr
 		ul
 			margin-top: 0
+			+clr
 		li
 			float: left
+			&:before
+				content: "/"
+				padding-right: 5px
+				text-decoration: none
 			&:first-child
+				&:before
+					content: " "
+					padding: 1px
 				a
 					color: #0866b1
-					&:before
-						content: ""
-						padding: 1px
 		a
 			padding-right: 5px
 			text-decoration: none
 			color: #212125
 			+fs(13)
 			+rr
-			&:before
-				content: "/"
-				padding-right: 5px
 			&.is-active
 				color: #0866b1
+			&:hover
+				text-decoration: underline
 	section
 		border-top: 1px dotted #c4c4c4
 		padding-top: 34px
@@ -174,6 +179,12 @@
 		+rl
 		&.is-active
 			color: #818187
+			&:hover
+				color: #818187
+				text-decoration: none
+		&:hover
+			color: darken(#0765b1, 20%)
+			text-decoration: underline
 	&.pages
 		margin-left: 70px
 
@@ -357,6 +368,8 @@
 			margin-top: -30.5px
 			z-index: 1000
 			+s(item_prev)
+			&:hover
+				+s(item_prev-h)
 		.item__next
 			position: absolute
 			top: 50%
@@ -364,6 +377,8 @@
 			margin-top: -30.5px
 			z-index: 1000
 			+s(item_next)
+			&:hover
+				+s(item_next-h)
 	.gallery__bottom
 		margin-top: 80px
 		.gallery__pager
