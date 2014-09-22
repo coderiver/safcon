@@ -25,6 +25,8 @@ body { font-family: Arial, sans-serif; font-weight: normal; line-height: 1.4; ba
 .out { min-height: 100%; margin-bottom: -194px; }
 .out:after { content: ""; display: block; height: 194px; }
 
+.out, .footer__wrapper { min-width: 1200px; }
+
 @font-face { font-family: FontAwesome; src: url("fonts/fontawesome-webfont.eot"); src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: roboto-regular; src: url("fonts/roboto-regular.eot"); src: url("fonts/roboto-regular.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-regular.woff") format("woff"), url("fonts/roboto-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -211,10 +213,11 @@ ol li span { padding-left: 10px; display: inline-block; vertical-align: middle; 
 
 .safcon { position: relative; width: 100%; max-width: 1323px; margin: 0 auto; -webkit-box-shadow: 0 9px 12px -11px rgba(0, 0, 0, 0.26) inset; -moz-box-shadow: 0 9px 12px -11px rgba(0, 0, 0, 0.26) inset; box-shadow: 0 9px 12px -11px rgba(0, 0, 0, 0.26) inset; }
 
-.safcon__inner { padding: 60px 0 0 55px; *zoom: 1; }
+.safcon__inner { padding-top: 60px; *zoom: 1; }
 .safcon__inner:after { content: " "; display: table; clear: both; }
 .safcon__inner .safcon__block { float: left; }
-.safcon__inner .safcon__block.withtxt { width: 750px; }
+.safcon__inner .safcon__block.withtxt { width: 750px; padding-left: 30px; }
+.safcon__inner .safcon__bl { padding-left: 30px; }
 .safcon__inner h2, .safcon__inner h6 { padding-bottom: 26px; font-size: 21px; font-size: 2.1rem; }
 .safcon__inner h6 { padding-bottom: 20px; }
 .safcon__inner img { margin: 74px 0 0 38px; }
